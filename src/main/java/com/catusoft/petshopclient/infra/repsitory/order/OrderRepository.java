@@ -1,8 +1,7 @@
-package com.catusoft.petshopclient.infra.repsitory.order;
+package com.catusoft.petshopclient.infra.repository.order;
 
 import com.catusoft.petshopclient.api.order.OrderDTO;
 import com.catusoft.petshopclient.infra.dao.order.OrderDAO;
-import com.catusoft.petshopclient.infra.dao.order.OrderEntity;
 import com.catusoft.petshopclient.infra.dao.product.ProductDAO;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;

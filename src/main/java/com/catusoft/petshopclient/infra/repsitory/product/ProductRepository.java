@@ -1,4 +1,4 @@
-package com.catusoft.petshopclient.infra.repsitory.product;
+package com.catusoft.petshopclient.infra.repository.product;
 
 import com.catusoft.petshopclient.infra.dao.product.ProductDAO;
 import com.catusoft.petshopclient.infra.dao.product.ProductEntity;
@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Objects;
 
 @Repository
-public class ProductRepositry {
+public class ProductRepository {
     @Autowired
     private ProductDAO productDAO;
 

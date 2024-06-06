@@ -2,7 +2,6 @@ package com.catusoft.petshopclient.business.product;
 
 import com.catusoft.petshopclient.api.product.ManageStockDTO;
 import com.catusoft.petshopclient.infra.dao.product.ProductEntity;
-import com.catusoft.petshopclient.infra.repsitory.product.ProductRepositry;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,24 +10,24 @@ import java.util.List;
 @Service
 public class ProductService {
     @Autowired
-    private ProductRepositry productRepositry;
+    private com.catusoft.petshopclient.infra.repository.product.ProductRepository productRepository;
 
     public ProductEntity findById(Long id) {
-        return productRepositry.findById(id);
+        return productRepository.findById(id);
     }
     public List<ProductEntity> findAll() {
-        return productRepositry.findAll();
+        return productRepository.findAll();
     }
     public void save(ProductEntity productEntity) {
-        productRepositry.save(productEntity);
+        productRepository.save(productEntity);
     }
 
     public void delete(Long id) {
-        productRepositry.delete(id);
+        productRepository.delete(id);
     }
     public void manageStock(ManageStockDTO manageStockDTO) {
         Long id = manageStockDTO.getProductId();
         Integer quantity = manageStockDTO.getQuantity();
-        productRepositry.manageStock(id, quantity);
+        productRepository.manageStock(id, quantity);
     }
 }

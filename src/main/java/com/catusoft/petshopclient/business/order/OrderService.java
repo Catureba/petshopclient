@@ -1,9 +1,7 @@
 package com.catusoft.petshopclient.business.order;
 
 import com.catusoft.petshopclient.api.order.OrderDTO;
-import com.catusoft.petshopclient.infra.dao.order.OrderEntity;
-import com.catusoft.petshopclient.infra.repsitory.order.OrderConverter;
-import com.catusoft.petshopclient.infra.repsitory.order.OrderRepository;
+import com.catusoft.petshopclient.infra.repository.order.OrderRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
