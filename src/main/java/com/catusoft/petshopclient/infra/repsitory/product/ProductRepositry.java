@@ -2,6 +2,7 @@ package com.catusoft.petshopclient.infra.repsitory.product;
 
 import com.catusoft.petshopclient.infra.dao.product.ProductDAO;
 import com.catusoft.petshopclient.infra.dao.product.ProductEntity;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.Objects;
 
 @Repository
 public class ProductRepositry {
+    @Autowired
     private ProductDAO productDAO;
 
     public List<ProductEntity> findAll() {
