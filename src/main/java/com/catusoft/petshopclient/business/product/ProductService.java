@@ -1,5 +1,6 @@
 package com.catusoft.petshopclient.business.product;
 
+import com.catusoft.petshopclient.api.product.ManageStockDTO;
 import com.catusoft.petshopclient.infra.dao.product.ProductEntity;
 import com.catusoft.petshopclient.infra.repsitory.product.ProductRepositry;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +26,9 @@ public class ProductService {
     public void delete(Long id) {
         productRepositry.delete(id);
     }
-    public void manageStock(Long id, Integer quantity) {
+    public void manageStock(ManageStockDTO manageStockDTO) {
+        Long id = manageStockDTO.getProductId();
+        Integer quantity = manageStockDTO.getQuantity();
         productRepositry.manageStock(id, quantity);
     }
 }

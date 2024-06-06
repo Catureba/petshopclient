@@ -1,6 +1,7 @@
 package com.catusoft.petshopclient.business.product;
 
 
+import com.catusoft.petshopclient.api.product.ManageStockDTO;
 import com.catusoft.petshopclient.infra.dao.product.ProductEntity;
 import com.catusoft.petshopclient.infra.repsitory.product.ProductRepositry;
 import org.junit.jupiter.api.BeforeEach;
@@ -80,10 +81,12 @@ class ProductServiceTest {
     @Test
     void manageStock() {
         Long id = 1L;
-        Integer quantity = 5;
-        doNothing().when(productRepositry).manageStock(id, quantity);
-
-        productService.manageStock(id, quantity);
+        Integer quantity = 1;
+        ManageStockDTO manageStockDTO = new ManageStockDTO();
+        manageStockDTO.setProductId(id);
+        manageStockDTO.setQuantity(quantity);
+       doNothing().when(productRepositry).manageStock(manageStockDTO.getProductId(), manageStockDTO.getQuantity());
+        productService.manageStock(manageStockDTO);
 
         verify(productRepositry, times(1)).manageStock(id, quantity);
     }

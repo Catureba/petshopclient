@@ -20,7 +20,7 @@ public class ProductEntity {
 
     private String productDescription;
 
-    private String productPrice;
+    private Float productPrice;
 
     private Integer stock;
 }

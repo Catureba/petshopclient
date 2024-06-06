@@ -19,7 +19,7 @@ public class ProductRest {
     }
 
     @GetMapping("/id/{id}")
-    public ProductEntity getProductById(Long id) {
+    public ProductEntity getProductById(@PathVariable("id") Long id) {
         return productService.findById(id);
     }
 
@@ -29,12 +29,12 @@ public class ProductRest {
     }
 
     @DeleteMapping
-    public void deleteProduct(Long id) {
+    public void deleteProduct(@PathVariable("id") Long id) {
         productService.delete(id);
     }
 
     @PostMapping("/manageStock")
-    public void manageStock(Long id, Integer quantity) {
-        productService.manageStock(id, quantity);
+    public void manageStock(@RequestBody ManageStockDTO manageStockDTO) {
+        productService.manageStock(manageStockDTO);
     }
 }

@@ -14,19 +14,19 @@ public class OrderRest {
     private OrderService orderService;
 
     @GetMapping("")
-    public List<OrderEntity> getOrders() {
+    public List<OrderDTO> getOrders() {
         return orderService.findAll();
     }
     @GetMapping("/id/{id}")
-    public OrderEntity getOrderById(Long id) {
+    public OrderDTO getOrderById(@PathVariable("id") Long id) {
         return orderService.findById(id);
     }
     @PostMapping("")
-    public void saveOrder(OrderEntity orderEntity) {
-        orderService.save(orderEntity);
+    public void saveOrder(@RequestBody OrderDTO orderDTO) {
+        orderService.save(orderDTO);
     }
     @DeleteMapping
-    public void deleteOrder(Long id) {
+    public void deleteOrder(@PathVariable("id") Long id) {
         orderService.delete(id);
     }
 }
