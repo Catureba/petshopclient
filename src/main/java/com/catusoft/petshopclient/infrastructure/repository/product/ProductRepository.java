@@ -1,5 +1,6 @@
 package com.catusoft.petshopclient.infrastructure.repository.product;
 
+import com.catusoft.petshopclient.api.product.ProductDTO;
 import com.catusoft.petshopclient.infrastructure.dao.product.ProductDAO;
 import com.catusoft.petshopclient.infrastructure.dao.product.ProductEntity;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,16 +13,20 @@ import java.util.Objects;
 public class ProductRepository {
     @Autowired
     private ProductDAO productDAO;
-
-    public List<ProductEntity> findAll() {
-        return productDAO.findAll();
+    private ProductConverter productConverter;
+    public List<ProductDTO> findAll() {
+        var productEntities = productDAO.findAll();
+        return productConverter.toDTO(productEntities);
     }
 
-    public ProductEntity findById(Long id) {
-        return productDAO.findById(id).orElse(null);
+    public ProductDTO findById(Long id) {
+        var productEntity = productDAO.findById(id).orElse(null);
+        if (Objects.isNull(productEntity)) return null;
+        return productConverter.toDTO(productEntity);
     }
 
-    public void save(ProductEntity productEntity) {
+    public void save(ProductDTO productDTO) {
+        ProductEntity productEntity = productConverter.toEntity(productDTO);
         productDAO.save(productEntity);
     }
 

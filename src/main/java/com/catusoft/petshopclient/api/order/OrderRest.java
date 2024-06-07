@@ -20,11 +20,11 @@ public class OrderRest {
     public OrderDTO getOrderById(@PathVariable("id") Long id) {
         return orderService.findById(id);
     }
-    @PostMapping("")
+    @PostMapping
     public void saveOrder(@RequestBody OrderDTO orderDTO) {
         orderService.save(orderDTO);
     }
-    @DeleteMapping
+    @DeleteMapping("/id/{id}")
     public void deleteOrder(@PathVariable("id") Long id) {
         orderService.delete(id);
     }

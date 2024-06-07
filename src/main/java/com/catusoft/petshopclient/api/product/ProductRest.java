@@ -14,21 +14,21 @@ public class ProductRest {
     private ProductService productService;
 
     @GetMapping("")
-    public List<ProductEntity> getProducts() {
+    public List<ProductDTO> getProducts() {
         return productService.findAll();
     }
 
     @GetMapping("/id/{id}")
-    public ProductEntity getProductById(@PathVariable("id") Long id) {
+    public ProductDTO getProductById(@PathVariable("id") Long id) {
         return productService.findById(id);
     }
 
     @PostMapping("")
-    public void saveProduct(ProductEntity productEntity) {
-        productService.save(productEntity);
+    public void saveProduct(ProductDTO productDTO) {
+        productService.save(productDTO);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/id/{id}")
     public void deleteProduct(@PathVariable("id") Long id) {
         productService.delete(id);
     }
