@@ -3,6 +3,7 @@ package com.catusoft.petshopclient.business.product;
 
 import com.catusoft.petshopclient.api.product.ManageStockDTO;
 import com.catusoft.petshopclient.infra.dao.product.ProductEntity;
+import com.catusoft.petshopclient.infra.repository.product.ProductRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -18,7 +19,7 @@ import static org.mockito.Mockito.*;
 class ProductServiceTest {
 
     @Mock
-    private com.catusoft.petshopclient.infra.repository.product.ProductRepository productRepository;
+    private ProductRepository productRepository;
 
     @InjectMocks
     private ProductService productService;
