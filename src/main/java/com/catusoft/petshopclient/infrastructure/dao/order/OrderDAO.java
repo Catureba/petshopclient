@@ -1,4 +1,4 @@
-package com.catusoft.petshopclient.infra.dao.order;
+package com.catusoft.petshopclient.infrastructure.dao.order;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

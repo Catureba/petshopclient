@@ -2,8 +2,8 @@ package com.catusoft.petshopclient.business.product;
 
 
 import com.catusoft.petshopclient.api.product.ManageStockDTO;
-import com.catusoft.petshopclient.infra.dao.product.ProductEntity;
-import com.catusoft.petshopclient.infra.repository.product.ProductRepository;
+import com.catusoft.petshopclient.infrastructure.dao.product.ProductEntity;
+import com.catusoft.petshopclient.infrastructure.repository.product.ProductRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;

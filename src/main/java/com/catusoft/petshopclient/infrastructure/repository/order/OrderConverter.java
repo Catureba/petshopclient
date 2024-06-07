@@ -1,8 +1,8 @@
-package com.catusoft.petshopclient.infra.repository.order;
+package com.catusoft.petshopclient.infrastructure.repository.order;
 
 import com.catusoft.petshopclient.api.order.OrderDTO;
-import com.catusoft.petshopclient.infra.dao.order.OrderEntity;
-import com.catusoft.petshopclient.infra.dao.product.ProductEntity;
+import com.catusoft.petshopclient.infrastructure.dao.order.OrderEntity;
+import com.catusoft.petshopclient.infrastructure.dao.product.ProductEntity;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

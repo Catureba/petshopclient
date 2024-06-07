@@ -1,7 +1,7 @@
-package com.catusoft.petshopclient.infra.repository.product;
+package com.catusoft.petshopclient.infrastructure.repository.product;
 
-import com.catusoft.petshopclient.infra.dao.product.ProductDAO;
-import com.catusoft.petshopclient.infra.dao.product.ProductEntity;
+import com.catusoft.petshopclient.infrastructure.dao.product.ProductDAO;
+import com.catusoft.petshopclient.infrastructure.dao.product.ProductEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

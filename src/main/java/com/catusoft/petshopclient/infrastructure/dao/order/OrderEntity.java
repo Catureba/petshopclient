@@ -1,11 +1,10 @@
-package com.catusoft.petshopclient.infra.dao.order;
+package com.catusoft.petshopclient.infrastructure.dao.order;
 
-import com.catusoft.petshopclient.infra.dao.product.ProductEntity;
+import com.catusoft.petshopclient.infrastructure.dao.product.ProductEntity;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity(name = "order_table")
 @Setter

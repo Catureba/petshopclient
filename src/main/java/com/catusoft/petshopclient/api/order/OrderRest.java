@@ -1,7 +1,6 @@
 package com.catusoft.petshopclient.api.order;
 
 import com.catusoft.petshopclient.business.order.OrderService;
-import com.catusoft.petshopclient.infra.dao.order.OrderEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,4 +1,4 @@
-package com.catusoft.petshopclient.infra.dao.product;
+package com.catusoft.petshopclient.infrastructure.dao.product;
 
 import lombok.Getter;
 import lombok.Setter;

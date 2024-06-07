@@ -1,7 +1,7 @@
 package com.catusoft.petshopclient.api.product;
 
 import com.catusoft.petshopclient.business.product.ProductService;
-import com.catusoft.petshopclient.infra.dao.product.ProductEntity;
+import com.catusoft.petshopclient.infrastructure.dao.product.ProductEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
