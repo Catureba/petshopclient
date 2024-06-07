@@ -11,6 +11,7 @@ public class ProductConverter {
 
     public ProductEntity toEntity(ProductDTO productDTO) {
         ProductEntity productEntity = new ProductEntity();
+        productEntity.setId(productDTO.getId());
         productEntity.setProductName(productDTO.getProductName());
         productEntity.setProductDescription(productDTO.getProductDescription());
         productEntity.setProductPrice(productDTO.getProductPrice());
@@ -19,6 +20,7 @@ public class ProductConverter {
     }
     public ProductDTO toDTO(ProductEntity productEntity) {
         ProductDTO productDTO = new ProductDTO();
+        productDTO.setId(productEntity.getId());
         productDTO.setProductName(productEntity.getProductName());
         productDTO.setProductDescription(productEntity.getProductDescription());
         productDTO.setProductPrice(productEntity.getProductPrice());
@@ -26,6 +28,7 @@ public class ProductConverter {
         return productDTO;
     }
     public List<ProductDTO> toDTO(List<ProductEntity> productEntities) {
+        if (productEntities.isEmpty()) return List.of();
         return productEntities.stream().map(this::toDTO).toList();
     }
 }

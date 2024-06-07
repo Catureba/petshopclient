@@ -14,25 +14,20 @@ import java.util.Objects;
 @Slf4j
 public class OrderService {
     private final OrderRepository orderRepository;
+
     public OrderDTO findById(Long id) {
         return orderRepository.findById(id);
     }
 
     public List<OrderDTO> findAll() {
-        var orders = orderRepository.findAll();
-        if (Objects.isNull(orders) || orders.isEmpty()) {
-            log.error(orders.toString());
-            return null;
-        }
-        return orderRepository.findAll();
+        log.info("[Service] Buscando todos os pedidos");
+        List<OrderDTO> orders = orderRepository.findAll();
+        return orders;
     }
 
     public void save(OrderDTO orderDTO) {
-        try {
-            orderRepository.save(orderDTO);
-        } catch (Exception e) {
-            log.error(e.getMessage());
-        }
+        log.info("[Service] Salvando um novo pedido");
+        orderRepository.save(orderDTO);
     }
 
     public void delete(Long id) {

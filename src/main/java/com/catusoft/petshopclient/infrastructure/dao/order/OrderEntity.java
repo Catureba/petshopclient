@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity(name = "order_table")
 @Setter
@@ -18,7 +19,7 @@ public class OrderEntity {
 
     private Integer quantity;
 
-    private String orderDate;
+    private Date createdAt;
 
     @OneToOne
     @JoinColumn(name = "product_id")
